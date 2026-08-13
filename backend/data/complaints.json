@@ -1,0 +1,24 @@
+[
+  {
+    "id": "CMP37236658",
+    "title": "fan",
+    "description": "fan is not working ",
+    "location": "it branch",
+    "reporterName": "Anonymous",
+    "reporterEmail": "",
+    "status": "Submitted",
+    "createdAt": "2026-08-13T16:07:16.658Z",
+    "updatedAt": "2026-08-13T16:07:16.658Z"
+  },
+  {
+    "id": "CMP37321030",
+    "title": "fan i",
+    "description": "fan is not working",
+    "location": "it branch",
+    "reporterName": "Anonymous",
+    "reporterEmail": "",
+    "status": "Submitted",
+    "createdAt": "2026-08-13T16:08:41.030Z",
+    "updatedAt": "2026-08-13T16:08:41.030Z"
+  }
+]
