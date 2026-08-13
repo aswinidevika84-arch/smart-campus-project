@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  height: 70px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar h2 {
+  color: #2457c5;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links span {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.nav-links span:hover {
+  color: #2457c5;
+}
+
+.user-pill {
+  background: #eef2ff;
+  color: #2457c5;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: default !important;
+}
+
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  background: #2457c5;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #1c46a3;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero > p:first-child {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  color: #2457c5;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+  max-width: 600px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.buttons button:last-child {
+  background: white;
+  color: #2457c5;
+  border: 1px solid #2457c5;
+}
+
+/* ---------- Forms ---------- */
+.form-page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 40px 20px;
+}
+
+.form-page h1 {
+  color: #2457c5;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.form-page input,
+.form-page textarea,
+.form-page select {
+  width: 350px;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.form-page textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.error-text {
+  color: #d92d20;
+  font-size: 14px;
+  max-width: 350px;
+}
+
+.toggle-link {
+  color: #2457c5;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+/* ---------- Complaint cards ---------- */
+.success-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px 35px;
+  text-align: center;
+}
+
+.complaint-id {
+  font-weight: bold;
+  color: #2457c5;
+  font-size: 20px;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+.complaint-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px 25px;
+  width: 400px;
+  max-width: 90vw;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.complaint-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.complaint-card select {
+  width: 200px;
+}
+
+.timestamp {
+  color: #888;
+  font-size: 13px;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.status-Submitted {
+  background: #fff3cd;
+  color: #8a6d00;
+}
+
+.status-InProgress {
+  background: #cce5ff;
+  color: #084298;
+}
+
+.status-Resolved {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+
+.status-Rejected {
+  background: #f8d7da;
+  color: #842029;
+}
+
+/* ---------- Dashboard ---------- */
+.dashboard-page {
+  min-height: calc(100vh - 70px);
+  padding: 40px 8%;
+}
+
+.dashboard-page h1 {
+  color: #2457c5;
+  margin-bottom: 25px;
+}
+
+.complaint-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
