@@ -1,4 +1,6 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const rawApiUrl = import.meta.env.VITE_API_URL || "https://smart-campus-project.onrender.com/api";
+const cleanUrl = rawApiUrl.replace(/\/+$/, "");
+const API_URL = cleanUrl.endsWith("/api") ? cleanUrl : `${cleanUrl}/api`;
 
 async function request(path, options = {}) {
   const token = localStorage.getItem("token");

@@ -17,6 +17,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/complaints", complaintRoutes);
+app.use("/auth", authRoutes);
+app.use("/complaints", complaintRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Route not found" });
