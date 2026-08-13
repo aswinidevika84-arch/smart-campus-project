@@ -37,9 +37,12 @@ export const api = {
 
   listComplaints: () => request("/complaints"),
 
-  updateStatus: (id, status) =>
+  getMyComplaints: () => request("/complaints/my"),
+
+  updateStatus: (id, payload) =>
     request(`/complaints/${id}/status`, {
       method: "PATCH",
-      body: JSON.stringify({ status }),
+      body: JSON.stringify(payload),
     }),
 };
+
