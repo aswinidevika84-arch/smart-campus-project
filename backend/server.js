@@ -26,13 +26,33 @@ app.use((req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
+const os = require("os");
+
+function getLocalIp() {
+  const nets = os.networkInterfaces();
+  for (const name of Object.keys(nets)) {
+    for (const net of nets[name]) {
+      if (net.family === "IPv4" && !net.internal) {
+        return net.address;
+      }
+    }
+  }
+  return "localhost";
+}
+
 async function startServer() {
   try {
     await db.ensureDb();
 
     app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
-});
+      const localIp = getLocalIp();
+      console.log("\n=======================================================");
+      console.log(" 🚀 SMART CAMPUS BACKEND IS RUNNING!");
+      console.log(` ➜ Local URL:   http://localhost:${PORT}`);
+      console.log(` ➜ Network URL: http://${localIp}:${PORT}`);
+      console.log(` ➜ Public URL:  https://smart-campus-project.onrender.com`);
+      console.log("=======================================================\n");
+    });
   } catch (error) {
     console.error("Database connection failed:", error.message);
     process.exit(1);
