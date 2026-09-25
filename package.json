@@ -1,0 +1,12 @@
+{
+  "name": "smart-campus-project",
+  "version": "1.0.0",
+  "description": "Smart Campus Issue Management System",
+  "main": "start-all.js",
+  "scripts": {
+    "dev": "node start-all.js",
+    "start": "node start-all.js",
+    "backend": "npm --prefix backend start",
+    "frontend": "npm --prefix frontend run dev"
+  }
+}
