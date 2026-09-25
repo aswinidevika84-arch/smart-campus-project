@@ -5,7 +5,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
+    host: true,
   },
+
   preview: {
     allowedHosts: ["smart-campus-project-web.onrender.com"],
   },
